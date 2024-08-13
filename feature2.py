@@ -8,10 +8,10 @@ def remove_menu(item_list):
     
     for i in range(len(item_list.beverage)):
         if choice == i+1:
-            item_list.beverage.remove(item_list.beverage[i])
-            item_list.total_price -= 4500
             print(f'{item_list.beverage[i]}주문이 취소되었습니다.')
             print("\n\n")
+            item_list.beverage.remove(item_list.beverage[i])
+            item_list.total_price -= 4500
             print(item_list.beverage)
             print(item_list.total_price)
             return
