@@ -2,6 +2,7 @@
 from common import Menu, ItemList, select
 from feature1 import add_menu
 from feature2 import remove_menu
+from check import check_menu
 
 def main():
     item_list = ItemList()
@@ -17,7 +18,7 @@ def main():
             remove_menu(item_list)
             print("\n\n")
         elif choice == Menu.CHECK.value:
-            # check_menu(item_list)
+            check_menu(item_list)
             print("\n\n")
         # elif choice == Menu.ORDER.value:
             # if order(item_list):
