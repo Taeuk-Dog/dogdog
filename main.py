@@ -1,11 +1,7 @@
-from enum import Enum
-
-class Menu(Enum):
-    ADD = 1
-    REMOVE = 2
-    CHECK = 3
-    ORDER = 4
-    END = 5# Main function
+# Main function
+from common import Menu, ItemList, select
+from feature1 import add_menu
+from feature2 import remove_menu
 
 def main():
     item_list = ItemList()
@@ -21,18 +17,18 @@ def main():
             remove_menu(item_list)
             print("\n\n")
         elif choice == Menu.CHECK.value:
-            check_menu(item_list)
+            # check_menu(item_list)
             print("\n\n")
-        elif choice == Menu.ORDER.value:
-            if order(item_list):
-                print("주문 완료. 프로그램을 종료합니다.")
-                break
-            else:
-                print("주문 보류!")
-                print("\n\n")
-        elif choice == Menu.END.value:
-            print("프로그램을 종료합니다")
-            break
+        # elif choice == Menu.ORDER.value:
+            # if order(item_list):
+                # print("주문 완료. 프로그램을 종료합니다.")
+                # break
+            # else:
+                # print("주문 보류!")
+                # print("\n\n")
+        # elif choice == Menu.END.value:
+        #     print("프로그램을 종료합니다")
+        #     break
         else:
             print("잘못된 입력입니다. 동작을 취소합니다.")
             break
